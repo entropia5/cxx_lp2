@@ -1,5 +1,6 @@
-// for.cpp by Bill Weinman [bw.org]
-// updated 2022-06-15
+//day2, ex3
+
+
 #include <format>
 #include <iostream>
 

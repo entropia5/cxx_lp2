@@ -237,3 +237,82 @@ arr — диапазон (range), a value — текущий элемент.
 
 
 
+Функции. 
+
+/*
+
+    #include <format>
+    #include <iostream>
+
+    using std::format;
+    using std::cout;
+
+    void func() {
+    cout << "this is func()\n";
+    }
+
+    int main()
+    {
+    cout << "this is main()\n";
+    func(); //вызов ф-ции
+    }
+
+//содержимое в теле ф-ции {} говорит о том, что это за ф-ция.
+// сначала запускается содержимое main, потом вызов ф-ции func() происходит и 1 ф-ция выводит инструкцию 2ой ф-ции void.
+
+*/
+
+теперь добавим параметры.
+Пример:
+
+/*
+    
+    #include <iostream>
+
+
+    using std::cout;
+    using std::format;
+
+    void func(int a)    
+    {
+    cout << format("a is {}\n", a);
+    }
+
+    int main()
+    {
+    cout << "this is main()\n";
+    func(42);
+    }
+*/
+
+Мы можем добавлять и несколько параметров и передавать несколько значений ф-ции.
+
+/*
+    
+    #include <iostream>
+
+
+    using std::cout;
+    using std::format;
+
+    void func(int a, const  char* s)
+    {
+    cout << format("a is {} {}\n", a, s);
+    }
+
+    int main()
+    {
+    cout << "this is main()\n";
+    func(42, "forty-two");
+    }
+
+*/
+
+Итак...я передал 2 значения func(42, "forty-two"); в ф-цию. Выбираются они в ф-ции с помощью (int a, const  char* s)
+И вывожу их используя эти переменные: a, s в cout << format("a is {} {}\n", a, s);
+
+Ф-ция также может возвращать значение. 
+Просто для этого нужно указать тип который нужно вернуть. Вместо void сделать int например. и в конце добавить return и добавить выражение: retuen a * 2;
+А внизу вместо func(42, "forty-two"); можно сказать так: auto x = func(42, "forty-two"); и добавить вывод: cout << format("x is {}\n", x); 42 умножит на 2.
+ 
+Ф-ция может возвращать только одно значение. 

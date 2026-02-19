@@ -1,5 +1,4 @@
-// pointer-incr.cpp by Bill Weinman <http://bw.org/>
-// updated 2020-05-26
+// day04, ex2.2
 #include <format>
 #include <iostream>
 #include <cstdint>

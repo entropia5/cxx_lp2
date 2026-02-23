@@ -1,5 +1,6 @@
-// conditional_statements.cpp by Bill Weinman [bw.org]
-// updated 2022-05-21
+//day05
+
+
 #include <format>
 #include <iostream>
 

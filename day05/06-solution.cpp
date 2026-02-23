@@ -1,7 +1,4 @@
-// 06-solution.cpp by Bill Weinman [bw.org]
-// updated 2022-06-01
-#include <format>
-#include <iostream>
+//day05
 
 using std::format;
 using std::cout;

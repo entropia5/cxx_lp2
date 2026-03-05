@@ -1,29 +1,45 @@
-// vector.cpp
-
+/**
+ * vector.cpp
+ *  Демонстрация основных операций с контейнером std::vector в C++
+ *
+ * Этот файл содержит примеры использования std::vector, включая:
+ * - Инициализацию вектора из списка инициализации
+ * - Доступ к элементам (front(), back(), operator[], at())
+ * - Итерацию через итераторы и range-based for loop
+ * - Модификацию вектора (insert(), erase(), push_back())
+ * - Создание вектора из C-массива
+ * - Работу с vector<string>
+ *
+ * @author entropia
+ * @date 2026
+ * @version 1.1
+ */
 
 #include <format>
 #include <iostream>
 #include <string>
 #include <vector>
 
-using std::format;
 using std::cout;
+using std::format;
 using std::vector;
 
-int main() {
+int main()
+{
     cout << "vector from initializer list:\n";
-    vector<int> vi1 {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    
+    vector<int> vi1{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
     cout << format("size: {}\n", vi1.size());
     cout << format("front: {}\n", vi1.front());
     cout << format("back: {}\n", vi1.back());
     cout << '\n';
-    
+
     // iterator
     cout << "iterator:\n";
     auto itbegin = vi1.begin();
     auto itend = vi1.end();
-    for (auto it = itbegin; it < itend; ++it) {
+    for (auto it = itbegin; it < itend; ++it)
+    {
         cout << format("{} ", *it);
     }
     cout << '\n';
@@ -32,7 +48,8 @@ int main() {
     cout << format("element 5: {}\n", vi1.at(5));
 
     cout << "range-based for loop:\n";
-    for (const auto& i : vi1) {
+    for (const auto &i : vi1)
+    {
         cout << format("{} ", i);
     }
     cout << "\n\n";
@@ -41,7 +58,7 @@ int main() {
     vi1.insert(vi1.begin() + 5, 42);
     cout << format("size: {}\n", vi1.size());
     cout << format("element 5: {}\n", vi1.at(5));
-    
+
     cout << "erase at begin + 5:\n";
     vi1.erase(vi1.begin() + 5);
     cout << format("size: {}\n", vi1.size());
@@ -54,19 +71,21 @@ int main() {
     cout << '\n';
 
     // from C-array
-    const size_t size {10};
-    int ia[size] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    const size_t size{10};
+    int ia[size]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     cout << "vector from C-array:\n";
     vector<int> vi2(ia, ia + size);
-    for (const auto& i : vi2) {
+    for (const auto &i : vi2)
+    {
         cout << format("{} ", i);
     }
     cout << "\n\n";
-    
+
     // vector of strings
     cout << "vector of strings:" << std::endl;
-    vector<std::string> vs {"one", "two", "three", "four", "five"};
-    for (const auto& v : vs) {
+    vector<std::string> vs{"one", "two", "three", "four", "five"};
+    for (const auto &v : vs)
+    {
         cout << format("{}\n", v);
     }
 }

@@ -1,5 +1,6 @@
-// vector.cpp by Bill Weinman [bw.org]
-// updated 2022-06-04
+// vector.cpp
+
+
 #include <format>
 #include <iostream>
 #include <string>

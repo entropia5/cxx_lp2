@@ -21,7 +21,7 @@ public:
     Animal(const string& type, const string& name, const string& sound);
     Animal(const Animal&);  // конструктор копирования
     ~Animal();  // деструктор
-    Animal& operator = (const Animal&);   // оператор присваивания
+    Animal& operator = (const Animal&);   // оператор копирования/присваивания
     void print() const;
 };
 

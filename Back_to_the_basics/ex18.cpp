@@ -22,7 +22,8 @@ int main()
     {
         std::cout << "YES" << std::endl;
     }
-    else if (a < 0)
+    else
+        (a < 0);
     {
         std::cout << "NO" << std::endl;
     }

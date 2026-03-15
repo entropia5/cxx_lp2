@@ -88,3 +88,50 @@ public:
         return "bark";
     }
 };
+
+/*
+2. private, геттер, сеттер
+
+Сделай класс Car.
+Требования:
+
+поле price сделать private
+метод setPrice(int p)
+метод getPrice()
+
+В main():
+создай объект
+установи цену 5000
+выведи цену через геттер
+
+
+#include <iostream>
+
+class Car
+{
+private:
+    int price;
+
+public:
+    void setPrice(int p)
+    {
+        price = p;
+    }
+
+    int getPrice()
+    {
+        return price;
+    }
+
+    int main()
+    {
+        Car car;
+        car.setPrice(5000);
+        std::cout << "Price: " << car.getPrice() << std::endl;
+
+        return 0;
+    }
+
+}
+
+*/

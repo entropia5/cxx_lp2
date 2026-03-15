@@ -1,5 +1,47 @@
 /*
-Дружественные функции и классы для класса Car
+friend
+
+Сделай класс Box.
+
+Требования:
+поле weight сделать private
+конструктор, который задаёт weight
+дружественную функцию showWeight(Box b), которая выводит вес
+
+В main():
+создай объект Box
+вызови showWeight()
+*/
+
+#include <iostream>
+
+class Box
+{
+private:
+    double weight;
+
+public:
+    Box(double w)
+    {
+        weight = w;
+    }
+
+    friend void showWeight(Box b);
+};
+void showWeight(Box b)
+{
+    std::cout << "Weight: " << b.weight << std::endl;
+}
+
+int main()
+{
+    Box box(10.5);
+    showWeight(box);
+
+    return 0;
+}
+
+/*
 Нужно добавить дружественные функции и класс для класса Car.
 Перед этим давайте добавим в класс Car еще одно приватное поле number (int), для этого поля нет сеттера или геттера потому что номер машины не может извне меняться.
 Надо создать дружественный класс Admin который меняет значение поля number с помощью метода setCarNumber(Car& car, int number);
@@ -14,7 +56,7 @@ print(Car):
 Mark: Toyota
 Price: 10000
 Number: 123
-*/
+
 
 #pragma once
 #include <iostream>
@@ -77,3 +119,5 @@ public:
         car.number = number;
     }
 };
+
+*/

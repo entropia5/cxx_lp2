@@ -4,9 +4,9 @@ class Cube {
 public:
     double getVolume();
     double GetSurfaceArea();
-    void SetLenght (double lenght);
+    void SetLength (double length);
 
 private:
-    double lenght_;
+    double length_;
 
 };

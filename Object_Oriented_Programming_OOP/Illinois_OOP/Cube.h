@@ -1,10 +1,11 @@
 #pragma once
 
+
 class Cube {
 public:
     double getVolume();
-    double GetSurfaceArea();
-    void SetLength (double length);
+    double getSurfaceArea();
+    void setLength (double length);
 
 private:
     double length_;

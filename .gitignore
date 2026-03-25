@@ -6,4 +6,6 @@ tempCodeRunnerFile.cpp
 *.o
 bot
 main
- 
+build
+.vscode
+*.dSYM/
